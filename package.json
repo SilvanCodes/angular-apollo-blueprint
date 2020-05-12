@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "jest",
     "lint": "eslint --ext .js,.ts src/app",
-    "e2e": "ng e2e"
+    "lint:fix": "eslint --ext .js,.ts --fix src/app",
+    "e2e": "ng e2e",
+    "generate": "graphql-codegen"
   },
   "private": true,
   "jest": {
@@ -23,14 +25,25 @@
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
     "@angular/router": "~9.1.6",
+    "apollo-angular": "^1.9.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "apollo-angular-link-http": "^1.10.0",
+    "apollo-link": "^1.2.11",
+    "apollo-client": "^2.6.0",
+    "apollo-cache-inmemory": "^1.6.0",
+    "graphql-tag": "^2.10.0",
+    "graphql": "^14.6.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.5",
     "@angular/cli": "~9.1.5",
     "@angular/compiler-cli": "~9.1.6",
+    "@graphql-codegen/cli": "^1.13.5",
+    "@graphql-codegen/typescript": "^1.13.5",
+    "@graphql-codegen/typescript-apollo-angular": "^1.13.5",
+    "@graphql-codegen/typescript-operations": "^1.13.5",
     "@ngneat/spectator": "^5.6.1",
     "@types/jest": "^25.2.1",
     "@types/node": "^12.11.1",

@@ -1,1 +1,5 @@
+# itself :(
 .eslintrc.js
+
+# generated files
+src/app/generated

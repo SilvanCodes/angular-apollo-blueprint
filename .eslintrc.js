@@ -65,11 +65,22 @@ module.exports = {
                 default: "generic"
             }
         ],
+        "@typescript-eslint/explicit-member-accessibility": [
+            "error",
+            { overrides: { constructors: 'no-public' } }
+        ],
 
         /*=== import rules ===*/
         "import/newline-after-import": [
             "error",
             { count: 2 }
-        ]
+        ],
+    },
+    settings: {
+        "import/resolver": {
+            node: {
+                paths: ["."]
+            }
+        }
     }
 }
