@@ -36,11 +36,7 @@ module.exports = {
         ],
         "object-curly-spacing": [
             "error",
-            "always",
-            {
-                arraysInObjects: false,
-                objectsInObjects: false
-            }
+            "always"
         ],
         "no-multiple-empty-lines": [
             "error",
