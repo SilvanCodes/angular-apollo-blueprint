@@ -20,9 +20,9 @@ describe('StorageService', () => {
   afterEach(() => window.localStorage.clear())
 
   it('should set key to stringified value', () => {
-    spectator.service.setItem('jwt', { username: 'test' });
+    spectator.service.setItem('jwt', 'someJwt');
 
-    expect(window.localStorage.getItem('jwt')).toEqual(JSON.stringify({ username: 'test' }));
+    expect(window.localStorage.getItem('jwt')).toEqual(JSON.stringify('someJwt'));
   });
 
   it('should propagate updates', () => {
@@ -35,11 +35,11 @@ describe('StorageService', () => {
     expect(latestValue.getValue()).toEqual(null);
     expect(storage.getItem('jwt')).toEqual(null);
 
-    storage.setItem('jwt', { username: 'foo' });
+    storage.setItem('jwt', 'someJwt');
 
     // should have value
-    expect(latestValue.getValue()).toEqual({ username: 'foo' });
-    expect(storage.getItem('jwt')).toEqual({ username: 'foo' });
+    expect(latestValue.getValue()).toEqual('someJwt');
+    expect(storage.getItem('jwt')).toEqual('someJwt');
 
     storage.removeItem('jwt');
 
