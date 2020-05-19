@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CoreModule } from './core/core.module';
+import { ConfigurationService } from './core/services';
+import { initializeConfiguration } from './core/initializers';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,17 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    CoreModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeConfiguration,
+      multi: true,
+      deps: [ConfigurationService]
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

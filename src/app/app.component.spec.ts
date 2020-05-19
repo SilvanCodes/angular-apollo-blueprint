@@ -6,10 +6,10 @@ import { TimeGQL, TimeQuery } from './generated';
 import { mockProvider } from '@ngneat/spectator';
 import { BehaviorSubject } from 'rxjs';
 import { ApolloQueryResult, NetworkStatus } from 'apollo-client';
+import { ConfigurationService } from './core/services';
 
 
 describe('AppComponent', () => {
-
   let spectator: Spectator<AppComponent>;
   const createComponent = createHostFactory({
     component:  AppComponent,
@@ -24,6 +24,9 @@ describe('AppComponent', () => {
           networkStatus: NetworkStatus.ready,
           stale: false
         }) })
+      }),
+      mockProvider(ConfigurationService, {
+        getItem$: () => new BehaviorSubject('')
       })
     ],
     // in order to ignore non-stubbed router-outet

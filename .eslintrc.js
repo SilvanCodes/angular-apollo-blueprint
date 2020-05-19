@@ -46,6 +46,10 @@ module.exports = {
                 maxEOF: 1
             }
         ],
+        "quotes": [
+            "error",
+            "single"
+        ],
 
         /*=== typescript rules ===*/
         "@typescript-eslint/no-empty-function": [
