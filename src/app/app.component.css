@@ -1,0 +1,8 @@
+.small-stack {
+    --margin: var(--s1);
+    --padding: var(--s-2);
+}
+
+.big-stack {
+    --margin: var(--s3);
+}

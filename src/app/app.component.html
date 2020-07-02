@@ -1,3 +1,72 @@
-<h1>Welcome to {{ title }}</h1>
-<p [innerHtml]="time$ | async"></p>
-<p [innerHtml]="storageType$ | async"></p>
+<claiv-sidebar [style.--sidebar-width]="'10rem'">
+    <claiv-box>
+        <claiv-cover>
+            <h1>test</h1>
+            <p>sidebar</p>
+        </claiv-cover>
+    </claiv-box>
+    <claiv-box>
+        <claiv-center>
+    
+            <claiv-stack class="small-stack">
+                <claiv-box>
+                    <claiv-cluster [style.--justify]="'space-between'">
+                        <h1>TITLE</h1>
+                        <claiv-cluster>
+                            <!-- <h2>foo</h2> -->
+                    
+                            <claiv-box>
+                                FOO
+                            </claiv-box>
+                            <claiv-box>
+                                BAR
+                            </claiv-box>
+                            <claiv-box>
+                                FOOFOO
+                            </claiv-box>
+                            <claiv-box>
+                                BARBAR
+                            </claiv-box>
+                        </claiv-cluster>
+                    </claiv-cluster>
+                </claiv-box>
+                
+        
+            <!-- <p [innerHtml]="time$ | async"></p> -->
+            
+                <claiv-box class="test">
+                    <claiv-stack>
+                        <p [innerHtml]="storageType$ | async"></p>
+                        <p [innerHtml]="storageType$ | async"></p>
+                        <p [innerHtml]="storageType$ | async"></p>
+                        <p [innerHtml]="storageType$ | async"></p>
+                    </claiv-stack>
+                </claiv-box>
+            
+                <claiv-stack class="big-stack">
+                    <claiv-switcher>
+                        <claiv-box>
+                            <claiv-center>
+                                <p [innerHtml]="storageType$ | async"></p>
+                            </claiv-center>
+                        </claiv-box>
+                        <claiv-box>
+                            <claiv-center>
+                                <p [innerHtml]="storageType$ | async"></p>
+                            </claiv-center>
+                        </claiv-box>
+                        <claiv-box>
+                            <claiv-center>
+                                <p [innerHtml]="storageType$ | async"></p>
+                            </claiv-center>
+                        </claiv-box>
+                    </claiv-switcher>
+                </claiv-stack>
+        
+                
+        
+            </claiv-stack>
+        </claiv-center>
+    </claiv-box>
+    
+</claiv-sidebar>
