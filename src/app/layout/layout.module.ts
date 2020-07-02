@@ -7,6 +7,10 @@ import { ClusterComponent } from './layouts/cluster.component';
 import { SidebarComponent } from './layouts/sidebar.component';
 import { SwitcherComponent } from './layouts/switcher.component';
 import { CoverComponent } from './layouts/cover.component';
+import { GridComponent } from './layouts/grid.component';
+import { FrameComponent } from './layouts/frame.component';
+import { ReelComponent } from './layouts/reel.component';
+import { ImposterComponent } from './layouts/imposter.component';
 
 
 
@@ -18,7 +22,11 @@ import { CoverComponent } from './layouts/cover.component';
     ClusterComponent,
     SidebarComponent,
     SwitcherComponent,
-    CoverComponent
+    CoverComponent,
+    GridComponent,
+    FrameComponent,
+    ReelComponent,
+    ImposterComponent
   ],
   imports: [
     CommonModule
@@ -30,7 +38,11 @@ import { CoverComponent } from './layouts/cover.component';
     ClusterComponent,
     SidebarComponent,
     SwitcherComponent,
-    CoverComponent
+    CoverComponent,
+    GridComponent,
+    FrameComponent,
+    ReelComponent,
+    ImposterComponent
   ]
 })
 export class LayoutModule { }

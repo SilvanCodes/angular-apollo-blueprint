@@ -33,7 +33,7 @@
 	box-sizing: border-box;
 
 	/* cap max-with for visual elements */
-	/* max-width: var(--measure); */
+	max-width: 100%;
 
 	/* clear default padding and margin*/
 	margin: 0;
