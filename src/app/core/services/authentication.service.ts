@@ -17,24 +17,23 @@ type Jwt = {
 export class AuthenticationService {
 
   constructor(
-    private login: LoginGQL,
     private storage: StorageService
   ) { }
 
-  public doLogin(username: string, password: string): void {
-    this.login.mutate({ username, password }).subscribe(({ data: { login } }) => {
-      this.storage.setItem('jwt', login);
-    });
-  }
+  // public doLogin(username: string, password: string): void {
+  //   this.login.mutate({ username, password }).subscribe(({ data: { login } }) => {
+  //     this.storage.setItem('jwt', login);
+  //   });
+  // }
 
-  public jwt$(): Observable<Jwt> {
+  public get jwt$(): Observable<Jwt> {
     return this.storage.getItem$('jwt').pipe(
       map<string, Jwt>(jwt => jwt ? jwtDecode(jwt) : null)
     );
   }
 
-  public isAuthenticated$(): Observable<boolean> {
-    return this.jwt$().pipe(
+  public get isAuthenticated$(): Observable<boolean> {
+    return this.jwt$.pipe(
       map(jwt => jwt ? jwt.exp > Date.now() : false)
     );
   }

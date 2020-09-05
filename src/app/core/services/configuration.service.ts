@@ -6,6 +6,7 @@ import { pluck, shareReplay } from 'rxjs/operators';
 
 export type Configuration = {
   storage: 'localStorage' | 'sessionStorage';
+  gqlEndpoint: string;
 }
 
 type ConfigurationKey = keyof Configuration;

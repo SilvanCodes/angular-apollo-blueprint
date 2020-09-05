@@ -1,3 +1,8 @@
+# Setup
+
+- adapt config.json
+- adapt codgen.json
+
 # Blueprint
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.

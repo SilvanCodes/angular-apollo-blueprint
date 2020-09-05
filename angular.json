@@ -89,6 +89,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "blueprint"
+    }
+  },
+  "defaultProject": "blueprint",
+  "cli": {
+    "analytics": false
+  }
 }

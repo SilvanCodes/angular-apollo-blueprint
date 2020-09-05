@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 
 type StorageApi = {
-  jwt: string;
+  jwt: string | null;
 }
 
 type StorageKey = keyof StorageApi;
